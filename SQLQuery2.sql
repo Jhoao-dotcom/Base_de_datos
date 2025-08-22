@@ -1,0 +1,6 @@
+insert into estudiantes (nombre,apellido,carrera)
+values ('ñando','perito','ing de sistemas')
+insert into estudiantes (nombre,apellido,carrera)
+values ('sarita', 'saicsachumaan','gastromía')
+insert into estudiantes (nombre,apellido,carrera)
+values ('jhare','torres','Ing. de Sistemas')
