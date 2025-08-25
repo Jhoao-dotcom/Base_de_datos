@@ -6,5 +6,3 @@ create table estudiantes (
 	apellido nvarchar (50) not null,
 	carrera nvarchar (100) not null
 );
-insert into estudiantes (nombre,apellido,carrera)
-values ('sarita', 'saicsachumaan','gastromia')
