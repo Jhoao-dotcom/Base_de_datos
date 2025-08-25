@@ -1,6 +1,58 @@
 insert into estudiantes (nombre,apellido,carrera)
-values ('�ando','perito','ing de sistemas')
+values ('ñando','perito','ing de sistemas')
 insert into estudiantes (nombre,apellido,carrera)
-values ('sarita', 'saicsachumaan','gastrom�a')
+values ('sarita', 'saicsachumaan','gastromía')
 insert into estudiantes (nombre,apellido,carrera)
 values ('jhare','torres','Ing. de Sistemas')
+  // nuevo ingreso de 50 datos para la tabla principal, estudiantes 
+INSERT INTO estudiantes (nombre, apellido, carrera) VALUES
+('Roberto','Valenzuela','Arquitectura'),
+('Lucía','García','Economía'),
+('Carla','Fernández','Ingeniería de Sistemas'),
+('Iván','Paredes','Psicología'),
+('Laura','Cáceres','Ingeniería de Sistemas'),
+('Luis','Suárez','Contabilidad'),
+('Fernando','Torres','Arquitectura'),
+('Eduardo','Silva','Psicología'),
+('Carlos','Cruz','Arquitectura'),
+('Jorge','Delgado','Administración'),
+('Carla','Arce','Contabilidad'),
+('Luis','Rosales','Educación'),
+('Natalia','Delgado','Economía'),
+('Sofía','Rosales','Derecho'),
+('Teresa','Díaz','Gastronomía'),
+('Liliana','Acosta','Contabilidad'),
+('Andrés','Reyes','Derecho'),
+('Adriana','Jiménez','Psicología'),
+('Ricardo','Acosta','Psicología'),
+('Sofía','Morales','Derecho'),
+('Felipe','Arce','Derecho'),
+('Paola','Rosales','Ingeniería de Sistemas'),
+('Daniel','García','Administración'),
+('Esteban','Ruiz','Medicina'),
+('María','Gómez','Medicina'),
+('Julia','Gómez','Gastronomía'),
+('Carla','Salazar','Medicina'),
+('Alberto','Cáceres','Psicología'),
+('Juan','Gómez','Arquitectura'),
+('Valeria','Reyes','Economía'),
+('Daniel','Campos','Arquitectura'),
+('Diana','Flores','Psicología'),
+('Julia','Ruiz','Economía'),
+('Sebastián','Medina','Psicología'),
+('Andrés','Campos','Derecho'),
+('Pedro','Suárez','Contabilidad'),
+('Sebastián','Fernández','Educación'),
+('Gabriela','Torres','Psicología'),
+('Diego','Gómez','Administración'),
+('Sofía','Cordero','Gastronomía'),
+('Marta','Medina','Medicina'),
+('Marta','Martínez','Derecho'),
+('Pedro','López','Administración'),
+('Diego','Reyes','Ingeniería de Sistemas'),
+('María','Valenzuela','Economía'),
+('Diego','Reyes','Arquitectura'),
+('Lucía','Romero','Educación'),
+('Natalia','Chávez','Ingeniería de Sistemas'),
+('Natalia','Guerrero','Medicina'),
+('Óscar','Valenzuela','Administración');
