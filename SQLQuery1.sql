@@ -1,3 +1,9 @@
+//en primer lugar creamos nuestra base de datos, para ellos abrimos una consulta con el script
+create database estudiantes
+	//ubi de la base de datos
+	// tamaño, max de tamaño y progresion de tamaño
+FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\mi primera vez.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+
 use [mi primera vez];
 go 
 create table estudiantes (
@@ -6,3 +12,4 @@ create table estudiantes (
 	apellido nvarchar (50) not null,
 	carrera nvarchar (100) not null
 );
+
