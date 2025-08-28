@@ -10,6 +10,12 @@ create table estudiantes (
 	id int identity(1,1) primary key,
 	nombre NVARCHAR (50) NOT NULL,
 	apellido nvarchar (50) not null,
-	carrera nvarchar (100) not null
+	carrera nvarchar (100) not null,
+	id_carrera int not null 
+	constraint Fk_estudiantes_carrera foreign key (id_carrera) references carrera(id)
+);
+CREATE TABLE carreras (
+    id_carrera INT PRIMARY KEY,
+    nombre_carrera NVARCHAR(100) NOT NULL
 );
 
