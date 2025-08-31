@@ -19,5 +19,7 @@ CREATE TABLE carreras (
     id_carrera INT PRIMARY KEY,
     nombre_carrera NVARCHAR(100) NOT NULL
 );
+select * from estudiantes
+
 
 
