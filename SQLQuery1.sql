@@ -21,5 +21,7 @@ CREATE TABLE carreras (
 );
 select * from estudiantes
 
+delete from estudiantes 
+where id= 2
 
 
