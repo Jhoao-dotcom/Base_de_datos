@@ -5,4 +5,6 @@ Paso 1. Necesitas el JDBC driver de MySQL. Puedes descargarlo en el siguiente en
 
 Paso 2. Debes agregar el JDBC que es un archivo .jar a tu proyecto, es decir, al Build-Path de tu proyecto. Si estás usando Eclipse, puedes agregar el archivo haciendo clic con el botón derecho en el nombre de tu Proyecto > Build Path > Configure Build Path. En la pestaña Libraries, haces clic en Add Jars si el archivo lo copiaste a la carpeta de tu proyecto o en Add External JARs si tienes el archivo en otro directorio de tu computadora. Luego, haces clic en el botón inferior que dice Apply and Close.
 
+
 Paso 3. Debes crear una clase con un nombre distintivo, ejemplo ConexionMySQL.
+presente un problema grande porque en el netbeans no me reconnoce el conecto jdbc y no compila bieeeen
