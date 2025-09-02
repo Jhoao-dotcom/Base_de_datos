@@ -23,5 +23,6 @@ select * from estudiantes
 
 delete from estudiantes 
 where id= 2
+//solucionar en sql server porque no compila
 
 
