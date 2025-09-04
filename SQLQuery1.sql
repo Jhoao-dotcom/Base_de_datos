@@ -25,4 +25,7 @@ delete from estudiantes
 where id= 2
 //solucionar en sql server porque no compila
 
+SELECT * FROM estudiantes
+WHERE Nombre LIKE 'J%';
+
 
