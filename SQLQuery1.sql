@@ -46,4 +46,7 @@ SELECT carrera, COUNT(*) AS NumeroEstudiantes
 FROM Estudiantes
 GROUP BY carrera
 HAVING COUNT(*) > 2;
-
+//logica de tres valores
+SELECT * 
+FROM Estudiantes
+WHERE carrera = 'Ingeniería' OR carrera IS NULL;
