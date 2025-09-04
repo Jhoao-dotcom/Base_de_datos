@@ -24,8 +24,24 @@ select * from estudiantes
 delete from estudiantes 
 where id= 2
 //solucionar en sql server porque no compila
-
+//nombres con J
 SELECT * FROM estudiantes
 WHERE Nombre LIKE 'J%';
+//cuando id este dentro de 20 y 30
+SELECT * FROM estudiantes
+WHERE id BETWEEN 20 AND 30;
 
+SELECT Nombre,
+id,
+	CASE
+		WHEN id <10 THEN 'primeros puestos'
+		WHEN id BETWEEN 10 AND 40 THEN 'Medio'
+	ELSE 'ultimos'
+	END AS CategoriaEstudiantes
+FROM estudiantes;
 
+//mostrara carreras con mas de 2 estudiantes
+SELECT carrera, COUNT(*) AS NumeroEstudiantes
+FROM Estudiantes
+GROUP BY carrera
+HAVING COUNT(*) > 2;
