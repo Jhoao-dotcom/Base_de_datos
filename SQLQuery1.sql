@@ -31,6 +31,7 @@ WHERE Nombre LIKE 'J%';
 SELECT * FROM estudiantes
 WHERE id BETWEEN 20 AND 30;
 
+//clasificara a los estudiantes
 SELECT Nombre,
 id,
 	CASE
@@ -45,3 +46,4 @@ SELECT carrera, COUNT(*) AS NumeroEstudiantes
 FROM Estudiantes
 GROUP BY carrera
 HAVING COUNT(*) > 2;
+
