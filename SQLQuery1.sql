@@ -25,6 +25,8 @@ delete from estudiantes
 where id= 2
 //solucionar en sql server porque no compila
 //nombres con J
+USE [mi primera vez]
+	go
 SELECT * FROM estudiantes
 WHERE Nombre LIKE 'J%';
 //cuando id este dentro de 20 y 30
@@ -32,6 +34,8 @@ SELECT * FROM estudiantes
 WHERE id BETWEEN 20 AND 30;
 
 //clasificara a los estudiantes
+USE [mi primera vez]
+go
 SELECT Nombre,
 id,
 	CASE
@@ -50,3 +54,4 @@ HAVING COUNT(*) > 2;
 SELECT * 
 FROM Estudiantes
 WHERE carrera = 'Ingeniería' OR carrera IS NULL;
+
