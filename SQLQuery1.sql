@@ -51,7 +51,10 @@ FROM Estudiantes
 GROUP BY carrera
 HAVING COUNT(*) > 2;
 //logica de tres valores
+USE [mi primera vez]
+go
 SELECT * 
 FROM Estudiantes
 WHERE carrera = 'Ingeniería' OR carrera IS NULL;
+
 
