@@ -15,11 +15,13 @@ create table estudiantes (
 	id_carrera int not null 
 	constraint Fk_estudiantes_carrera foreign key (id_carrera) references carrera(id)
 );
+
 // creacion de 2da tabla para tener una clave foranea
 CREATE TABLE carreras (
     id_carrera INT PRIMARY KEY,
     nombre_carrera NVARCHAR(100) NOT NULL
 );
+
 select * from estudiantes
 
 delete from estudiantes 
@@ -57,6 +59,7 @@ go
 SELECT * 
 FROM Estudiantes
 WHERE carrera = 'Ingeniería' OR carrera IS NULL;
+
 
 
 
