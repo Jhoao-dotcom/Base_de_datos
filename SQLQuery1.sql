@@ -5,6 +5,7 @@ create database estudiantes
 FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\mi primera vez.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
 
 use [mi primera vez];
+
 go 
 create table estudiantes (
 	id int identity(1,1) primary key,
@@ -56,5 +57,6 @@ go
 SELECT * 
 FROM Estudiantes
 WHERE carrera = 'Ingeniería' OR carrera IS NULL;
+
 
 
