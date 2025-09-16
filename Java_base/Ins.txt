@@ -7,5 +7,6 @@ Paso 2. Debes agregar el JDBC que es un archivo .jar a tu proyecto, es decir, al
 aa
 
 Paso 3. Debes crear una clase con un nombre distintivo, ejemplo ConexionMySQL.
-presente un problema grande porque en el netbeans no me reconnoce el conecto jdbc y no compila bieeeen
+presente un problema grande porque en el netbeans no me reconnoce el conecto jdbc y no compila bieeeen, de manera directa 
+
 
