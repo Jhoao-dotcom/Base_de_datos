@@ -1,0 +1,29 @@
+//Ejemplo exists en base northwind
+SELECT CustomerID, CompanyName
+FROM dbo.Customers c
+WHERE EXISTS (
+    SELECT 1
+    FROM dbo.Orders o
+    WHERE o.CustomerID = c.CustomerID
+);
+
+En esta primera cdonsulta se solicita clinetes con al menos 1 pedido
+
+
+//el uso de no exists
+SELECT CustomerID, CompanyName
+FROM dbo.Customers c
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM dbo.Orders o
+    WHERE o.CustomerID = c.CustomerID
+);
+
+Clientes que no tienen pedidos 
+
+//consulta con IN
+SELECT CustomerID, CompanyName, Country
+FROM dbo.Customers
+WHERE Country IN ('USA', 'UK', 'Mexico');
+
+//retorna clientes que esten dentro de los 3 paises
