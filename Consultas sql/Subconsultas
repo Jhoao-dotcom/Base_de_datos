@@ -9,7 +9,6 @@ WHERE EXISTS (
 
 En esta primera cdonsulta se solicita clinetes con al menos 1 pedido
 
-
 //el uso de no exists
 SELECT CustomerID, CompanyName
 FROM dbo.Customers c
