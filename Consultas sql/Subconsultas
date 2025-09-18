@@ -1,3 +1,4 @@
+
 //Ejemplo exists en base northwind
 SELECT CustomerID, CompanyName
 FROM dbo.Customers c
