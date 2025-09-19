@@ -1,4 +1,4 @@
-
+//subcoinsultas a relaiar con la nortwind
 //Ejemplo exists en base northwind
 SELECT CustomerID, CompanyName
 FROM dbo.Customers c
