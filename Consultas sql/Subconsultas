@@ -27,3 +27,6 @@ FROM dbo.Customers
 WHERE Country IN ('USA', 'UK', 'Mexico');
 
 //retorna clientes que esten dentro de los 3 paises
+
+
+
