@@ -28,5 +28,10 @@ WHERE Country IN ('USA', 'UK', 'Mexico');
 
 //retorna clientes que esten dentro de los 3 paises
 
+#JOIN Y SUS TIPOS 
+//inner join para buscar clientes que tienen pedidos registadrados
+SELECT c.CustomerID, c.CompanyName, o.OrderID, o.OrderDate
+FROM Customers c
+INNER JOIN Orders o ON c.CustomerID = o.CustomerID;
 
-
+//left join 
