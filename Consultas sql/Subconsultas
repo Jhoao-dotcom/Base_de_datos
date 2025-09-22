@@ -34,4 +34,33 @@ SELECT c.CustomerID, c.CompanyName, o.OrderID, o.OrderDate
 FROM Customers c
 INNER JOIN Orders o ON c.CustomerID = o.CustomerID;
 
-//left join 
+//left join, muestra todos los clientes, tengan o no pedido 
+SELECT c.CustomerID, c.CompanyName, o.OrderID
+FROM Customers c
+LEFT JOIN Orders o ON c.CustomerID = o.CustomerID;
+
+//rigth join, para mostrar pedidos 
+SELECT c.CustomerID, c.CompanyName, o.OrderID
+FROM Customers c
+RIGHT JOIN Orders o ON c.CustomerID = o.CustomerID;
+
+//full jooin, para clinetes y pedidos en general
+SELECT c.CustomerID, c.CompanyName, o.OrderID
+FROM Customers c
+FULL OUTER JOIN Orders o ON c.CustomerID = o.CustomerID;
+
+//cross join, combinaciones entre transportistas y regiones, tener cuidado de sacar millones de copmbinaciones
+SELECT s.ShipperID, s.CompanyName AS Shipper,
+       r.RegionID, r.RegionDescription
+FROM Shippers s
+CROSS JOIN Region r;
+
+//union
+SELECT CompanyName, 'Cliente' AS Tipo
+FROM Customers
+
+UNION
+
+SELECT CompanyName, 'Proveedor' AS Tipo
+FROM Suppliers;
+
