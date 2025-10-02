@@ -5,7 +5,7 @@ CREATE PROCEDURE CrearNuevoPedido
     @Cantidad INT
 AS
 BEGIN
-    BEGIN TRY
+    BEGIN TRY 
         BEGIN TRANSACTION;
 
         -- 1. Insertamos un nuevo pedido en Orders
