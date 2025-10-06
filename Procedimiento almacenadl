@@ -8,6 +8,7 @@ BEGIN
     BEGIN TRY 
         BEGIN TRANSACTION;
 
+
         -- 1. Insertamos un nuevo pedido en Orders
         DECLARE @NuevoOrderID INT;
 
