@@ -34,3 +34,68 @@ BEGIN
         PRINT 'Error: no se pudo crear el pedido.';
     END CATCH
 END;
+
+
+FUNCIONES EN SQL SERVER, con ejemplos
+Ejemplo 1: Función de agregado
+
+Supongamos que quieres saber el promedio de precio unitario de todos los productos:
+
+SELECT AVG(UnitPrice) AS PrecioPromedio
+FROM Products;
+
+Explicación
+AVG(UnitPrice) → es una función de agregado que calcula el promedio de la columna UnitPrice.
+AS PrecioPromedio → le pone un alias al resultado.
+FROM Products → le decimos que use la tabla de productos.
+
+🔸 Resultado: Una sola fila con el precio promedio de todos los productos.
+
+Ejemplo 2: Función escalar
+
+Ver el nombre de los productos en mayúsculas:
+
+SELECT UPPER(ProductName) AS NombreMayuscula
+FROM Products;
+
+Explicación
+UPPER(ProductName) → convierte el texto de ProductName a mayúsculas.
+
+Se ejecuta para cada fila.
+
+Devuelve una columna con los nombres en mayúsculas.
+
+Ejemplo 3: Función de ventana (OVER)
+
+Saber el precio promedio por categoría, pero mostrando cada producto también:
+
+SELECT 
+    ProductName,
+    CategoryID,
+    UnitPrice,
+    AVG(UnitPrice) OVER(PARTITION BY CategoryID) AS PromedioCategoria
+FROM Products;
+
+Explicación
+OVER(PARTITION BY CategoryID) → agrupa internamente por categoría.
+AVG(UnitPrice) → calcula el promedio por grupo.
+Pero a diferencia de un GROUP BY, no colapsa las filas → sigue mostrando cada producto.
+
+🔸 Resultado: cada producto aparece con su precio y al lado el promedio de su categoría.
+
+Ejemplo 4: Función definida por el usuario (conceptual)
+
+Imagina que quieres calcular la edad de un empleado en base a su BirthDate.
+Podrías crear una función CalcularEdad() que reciba la fecha de nacimiento y devuelva la edad.
+
+Luego la usarías así:
+
+SELECT FirstName, LastName, dbo.CalcularEdad(BirthDate) AS Edad
+FROM Employees;
+
+Explicación
+dbo.CalcularEdad(BirthDate) → función que tú mismo creas.
+
+Hace el cálculo de años de diferencia entre BirthDate y la fecha actual.
+
+Devuelve un número entero (la edad).
