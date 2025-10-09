@@ -1,0 +1,56 @@
+Mecanismo Principal: Claves Foráneas
+En la tabla "uno" (padre):
+Tiene una clave primaria única (PK)
+
+En la tabla "muchos" (hija):
+Tiene un campo que referencia la PK de la tabla padre
+
+Este campo es la clave foránea (FK)
+
+Ejemplo Práctico
+sql
+-- Tabla "uno" (Clientes)
+CREATE TABLE clientes (
+    id_cliente INT PRIMARY KEY,
+    nombre VARCHAR(100)
+);
+
+-- Tabla "muchos" (Pedidos)
+CREATE TABLE pedidos (
+    id_pedido INT PRIMARY KEY,
+    id_cliente INT,
+    fecha_pedido DATE,
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
+);
+🛠️ Cómo lo Gestionan los Gestores:
+MySQL / SQL Server / PostgreSQL:
+Sintaxis similar para definir FKs
+
+Integridad referencial automática
+
+Restricciones ON DELETE y ON UPDATE
+
+Operaciones Disponibles:
+sql
+-- ON DELETE CASCADE: elimina hijos al borrar padre
+FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
+ON DELETE CASCADE
+
+-- ON DELETE SET NULL: establece NULL en hijos
+ON DELETE SET NULL
+
+-- ON UPDATE CASCADE: actualiza hijos al modificar padre
+ON UPDATE CASCADE
+Consultas Típicas:
+sql
+-- JOIN para recuperar datos relacionados
+SELECT c.nombre, p.fecha_pedido
+FROM clientes c
+JOIN pedidos p ON c.id_cliente = p.id_cliente;
+
+-- Consultar pedidos de un cliente específico
+SELECT * FROM pedidos WHERE id_cliente = 123;
+Restricciones de Integridad:
+Los gestores garantizan que:
+No puedes insertar en "muchos" sin que exista el "uno"
+No puedes eliminar un "uno" si tiene "muchos" asociados (a menos que uses CASCADE)
