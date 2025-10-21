@@ -15,7 +15,6 @@ CREATE TABLE clientes (
     nombre VARCHAR(100)
 );
 
-
 -- Tabla "muchos" (Pedidos)
 CREATE TABLE pedidos (
     id_pedido INT PRIMARY KEY,
@@ -55,3 +54,5 @@ Restricciones de Integridad:
 Los gestores garantizan que:
 No puedes insertar en "muchos" sin que exista el "uno"
 No puedes eliminar un "uno" si tiene "muchos" asociados (a menos que uses CASCADE)
+
+investigacion, ordenar con las demas
